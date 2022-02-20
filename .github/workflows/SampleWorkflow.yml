@@ -3,8 +3,8 @@ on:
   push: 
     branches:  [main]
 jobs: 
-  Check: 
-    name: Check
+  CheckPaclet: 
+    name: CheckPaclet
     runs-on: ubuntu-latest
     container: 
       image: wolframresearch/wolframengine:latest
@@ -12,11 +12,12 @@ jobs:
     env: 
       WOLFRAM_SYSTEM_ID: Linux-x86-64
       WOLFRAMSCRIPT_ENTITLEMENTID: ${{ secrets.WOLFRAMSCRIPT_ENTITLEMENTID }}
-    timeout-minutes: 10
     steps: 
     - name: Checkout
       id: checkout-code-step
       uses: actions/checkout@v2
+    - name: CreateLibraryDirectory
+      run: mkdir LibraryResources
     - name: Check
       id: check-paclet-step
       uses: rhennigan/check-paclet@v1.4.0
@@ -24,8 +25,9 @@ jobs:
         target: Submit
         paclet_cicd_version: 0.7.0
         definition_notebook: ./DefinitionNotebook.nb
-  Compile-Linux-x86-64: 
-    name: Compile-Linux-x86-64
+    timeout-minutes: 5
+  Compile-Linux: 
+    name: Compile-Linux
     runs-on: ubuntu-latest
     container: 
       image: wolframresearch/wolframengine:latest
@@ -46,9 +48,10 @@ jobs:
       name: Upload
       id: upload-artifacts-step
       uses: actions/upload-artifact@v2
-    needs:  [Check]
-  Compile-Windows-x86-64: 
-    name: Compile-Windows-x86-64
+    timeout-minutes: 15
+    needs:  [CheckPaclet]
+  Compile-Windows: 
+    name: Compile-Windows
     runs-on: windows-latest
     env: 
       WOLFRAM_SYSTEM_ID: Windows-x86-64
@@ -73,9 +76,10 @@ jobs:
       name: Upload
       id: upload-artifacts-step
       uses: actions/upload-artifact@v2
-    needs:  [Check]
-  Compile-MacOSX-x86-64: 
-    name: Compile-MacOSX-x86-64
+    timeout-minutes: 15
+    needs:  [CheckPaclet]
+  Compile-MacOSX: 
+    name: Compile-MacOSX
     runs-on: macos-latest
     env: 
       WOLFRAM_SYSTEM_ID: MacOSX-x86-64
@@ -100,7 +104,8 @@ jobs:
       name: Upload
       id: upload-artifacts-step
       uses: actions/upload-artifact@v2
-    needs:  [Check]
+    timeout-minutes: 15
+    needs:  [CheckPaclet]
   TestPaclet: 
     name: TestPaclet
     runs-on: ubuntu-latest
@@ -126,11 +131,8 @@ jobs:
         target: Submit
         paclet_cicd_version: 0.7.0
         definition_notebook: ./DefinitionNotebook.nb
-    needs: 
-    - Compile-Linux-x86-64
-    - Compile-Windows-x86-64
-    - Compile-MacOSX-x86-64
-    - Check
+    timeout-minutes: 5
+    needs:  [Compile-Linux, Compile-Windows, Compile-MacOSX]
   BuildPaclet: 
     name: BuildPaclet
     runs-on: ubuntu-latest
@@ -164,9 +166,5 @@ jobs:
       name: Upload
       id: upload-artifacts-step
       uses: actions/upload-artifact@v2
-    needs: 
-    - Compile-Linux-x86-64
-    - Compile-Windows-x86-64
-    - Compile-MacOSX-x86-64
-    - Check
-    - TestPaclet
+    timeout-minutes: 15
+    needs:  [TestPaclet]
