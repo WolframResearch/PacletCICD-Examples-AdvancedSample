@@ -212,6 +212,7 @@ jobs:
     - with: 
         path: build
         if-no-files-found: error
+        name: BuiltPaclet
       name: Upload
       id: upload-artifacts-step
       uses: actions/upload-artifact@v2
