@@ -13,7 +13,10 @@ PacletObject[ <|
             "Kernel",
             "Root"    -> "Kernel",
             "Context" -> { "MyPublisher`SamplePaclet`" },
-            "Symbols" -> { "MyPublisher`SamplePaclet`AddOne" }
+            "Symbols" -> {
+                "MyPublisher`SamplePaclet`AddOne",
+                "MyPublisher`SamplePaclet`AddTwo"
+            }
         },
         {
             "Documentation",
