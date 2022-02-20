@@ -16,7 +16,7 @@ jobs:
     - name: Checkout
       id: checkout-code-step
       uses: actions/checkout@v2
-    - name: CreateLibraryDirectory
+    - name: UntitledCommand
       run: mkdir LibraryResources
     - name: Check
       id: check-paclet-step
@@ -39,12 +39,8 @@ jobs:
     - name: Checkout
       id: checkout-code-step
       uses: actions/checkout@v2
-    - name: RestoreCachedWolframEngine
-      id: cache-restore-step
-      run: echo "::notice::RestoreCachedWolframEngine skipped (WolframEngine already installed)"
-    - name: InstallWolframEngine
-      id: install-wl-step
-      run: echo "::notice::InstallWolframEngine skipped (WolframEngine already installed)"
+    - name: InstallBuildTools
+      run: apt-get -y update && apt-get -y install build-essential
     - name: Compile
       run: wolframscript Scripts/Compile.wls
     - with: 
@@ -54,7 +50,7 @@ jobs:
       name: Upload
       id: upload-artifacts-step
       uses: actions/upload-artifact@v2
-    timeout-minutes: 15
+    timeout-minutes: 5
     needs:  [CheckPaclet]
   Compile-Windows: 
     name: Compile-Windows
