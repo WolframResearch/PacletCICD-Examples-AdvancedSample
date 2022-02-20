@@ -5,13 +5,13 @@ VerificationTest[
 ]
 
 VerificationTest[
-    AddTwo[ 5 ],
-    7,
-    TestID -> "AddTwo-Integer"
+    AddTwo @ 1,
+    3,
+    TestID -> "AddTwo-1"
 ]
 
 VerificationTest[
-    AddTwo[ x ],
-    x + 2,
-    TestID -> "AddTwo-Symbol"
+    AddTwo @ 2,
+    4,
+    TestID -> "AddTwo-2"
 ]
