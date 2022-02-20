@@ -2,7 +2,7 @@ PacletObject[ <|
     "Name"             -> "MyPublisher/SamplePaclet",
     "Description"      -> "A complete sample Paclet",
     "Creator"          -> "Example Author",
-    "BuildDate"        -> "`BuildDate`",
+    "BuildDate"        -> "$BuildDate$",
     "Version"          -> "1.0.0",
     "WolframVersion"   -> "13.0+",
     "License"          -> "MIT",

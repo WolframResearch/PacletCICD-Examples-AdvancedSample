@@ -5,6 +5,9 @@ $pacletInfoFile = FileNameJoin @ { $pacletDir, "PacletInfo.wl" };
 
 Export[
     $pacletInfoFile,
-    TemplateApply[ File @ $pacletInfoFile, <| "BuildDate" -> DateString[ ] |> ],
+    StringReplace[
+        ReadString @ $pacletInfoFile,
+        "$BuildDate$" -> DateString[ ]
+    ],
     "String"
 ]
