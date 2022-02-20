@@ -23,7 +23,7 @@ jobs:
       uses: rhennigan/check-paclet@v1.4.0
       with: 
         target: Submit
-        paclet_cicd_version: 0.7.0
+        paclet_cicd_version: 0.8.0
         definition_notebook: ./DefinitionNotebook.nb
     timeout-minutes: 5
   Compile-Linux: 
@@ -178,7 +178,7 @@ jobs:
       uses: rhennigan/test-paclet@v1.0.0
       with: 
         target: Submit
-        paclet_cicd_version: 0.7.0
+        paclet_cicd_version: 0.8.0
         definition_notebook: ./DefinitionNotebook.nb
     timeout-minutes: 5
     needs:  [Compile-Linux, Compile-Windows, Compile-MacOSX]
@@ -207,7 +207,7 @@ jobs:
       uses: rhennigan/build-paclet@v1.4.0
       with: 
         target: Submit
-        paclet_cicd_version: 0.7.0
+        paclet_cicd_version: 0.8.0
         definition_notebook: ./DefinitionNotebook.nb
     - with: 
         path: build
