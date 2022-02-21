@@ -1,4 +1,4 @@
-BeginPackage[ "MyPublisher`SamplePaclet`" ];
+BeginPackage[ "MyPublisher`AdvancedSamplePaclet`" ];
 
 AddOne;
 AddTwo;
@@ -15,7 +15,7 @@ $lib = FileNameJoin @ {
     DirectoryName[ $InputFileName, 2 ],
     "LibraryResources",
     $SystemID,
-    "MyLibrary." <> Internal`DynamicLibraryExtension[ ]
+    "SampleLibrary." <> Internal`DynamicLibraryExtension[ ]
 };
 
 End[ ];

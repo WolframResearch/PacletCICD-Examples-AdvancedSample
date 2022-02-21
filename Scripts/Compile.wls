@@ -16,7 +16,7 @@ ConsoleNotice[ "Build target directory: " <> $targetDir ];
 
 $built = CCompilerDriver`CreateLibrary[
     FileNames[ "*.c", $sourceDir ],
-    "MyLibrary",
+    "SampleLibrary",
     "TargetDirectory"   -> $targetDir,
     "CleanIntermediate" -> True
 ];

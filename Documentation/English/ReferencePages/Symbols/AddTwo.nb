@@ -48,7 +48,7 @@ Notebook[
       CellID -> 423919477
      ],
      Cell[
-      "MyPublisher/AdvancedSamplePaclet/SamplePaclet/ref/AddTwo",
+      "MyPublisher/AdvancedSamplePaclet/ref/AddTwo",
       "Categorization",
       CellLabel -> "URI",
       CellID -> 123088812
@@ -231,7 +231,12 @@ Notebook[
      Cell[
       BoxData[
        RowBox[
-        {"Needs", "[", "\"MyPublisher`SamplePaclet`\"", "]"}
+        {
+         "Needs",
+         "[",
+         "\"MyPublisher`AdvancedSamplePaclet`\"",
+         "]"
+        }
        ]
       ],
       "Input",
