@@ -1,5 +1,5 @@
 PacletObject[ <|
-    "Name"             -> "MyPublisher/SamplePaclet",
+    "Name"             -> "MyPublisher/AdvancedSamplePaclet",
     "Description"      -> "A complete sample Paclet",
     "Creator"          -> "Example Author",
     "BuildDate"        -> "$BuildDate$",
