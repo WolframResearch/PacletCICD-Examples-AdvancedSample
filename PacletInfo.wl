@@ -1,6 +1,6 @@
 PacletObject[ <|
     "Name"             -> "MyPublisher/AdvancedSamplePaclet",
-    "Description"      -> "A complete sample Paclet",
+    "Description"      -> "A complete sample Paclet that includes library resources",
     "Creator"          -> "Example Author",
     "BuildDate"        -> "$BuildDate$",
     "Version"          -> "1.0.0",

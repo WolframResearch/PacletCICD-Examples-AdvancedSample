@@ -15,3 +15,11 @@ VerificationTest[
     3,
     TestID -> "AddOne-2"
 ]
+
+VerificationTest[
+    AddOne[ 2^64 ],
+    HoldPattern[ LibraryFunction ][ ___ ][ 2^64 ],
+    { LibraryFunction::cfsa },
+    SameTest -> MatchQ,
+    TestID -> "AddOne-Integer-Overflow"
+]
