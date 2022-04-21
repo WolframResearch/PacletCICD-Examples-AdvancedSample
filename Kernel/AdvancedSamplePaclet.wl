@@ -1,4 +1,4 @@
-BeginPackage[ "MyPublisher`AdvancedSamplePaclet`" ];
+BeginPackage[ "SamplePublisher`AdvancedSamplePaclet`" ];
 
 AddOne;
 AddTwo;
