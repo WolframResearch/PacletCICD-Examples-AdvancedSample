@@ -1,6 +1,6 @@
 # PacletCICD-Examples-AdvancedSample
 
-This is a sample Paclet used for [PacletCICD](https://github.com/rhennigan/PacletCICD) documentation examples. This Paclet is meant to demonstrate more advanced CI/CD workflows that involves: 
+This is a sample Paclet used for [PacletCICD](https://github.com/WolframResearch/PacletCICD) documentation examples. This Paclet is meant to demonstrate more advanced CI/CD workflows that involves: 
 
 * standard Paclet checks
 * multi-platform compilation
@@ -9,7 +9,7 @@ This is a sample Paclet used for [PacletCICD](https://github.com/rhennigan/Pacle
 
 A local copy can be retrieved in Wolfram Language using the following steps.
 
-Install the [PacletCICD](https://github.com/rhennigan/PacletCICD) Paclet:
+Install the [PacletCICD](https://github.com/WolframResearch/PacletCICD) Paclet:
 ```Mathematica
 PacletInstall[ResourceObject["Wolfram/PacletCICD"]]
 ```

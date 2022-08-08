@@ -2398,7 +2398,7 @@ Notebook[
             CellID -> 475746126
            ],
            Cell[
-            "https://github.com/rhennigan/PacletCICD-Examples-AdvancedSample",
+            "https://github.com/WolframResearch/PacletCICD-Examples-AdvancedSample",
             "Text",
             CellID -> 376824266
            ]
@@ -3156,10 +3156,10 @@ Notebook[
            Cell[
             TextData[
              ButtonBox[
-              "GitHub - rhennigan/PacletCICD: Continuous integration and deployment for Wolfram Language Paclets",
+              "GitHub - WolframResearch/PacletCICD: Continuous integration and deployment for Wolfram Language Paclets",
               BaseStyle -> "Hyperlink",
-              ButtonData -> {URL["https://github.com/rhennigan/PacletCICD"], None},
-              ButtonNote -> "https://github.com/rhennigan/PacletCICD"
+              ButtonData -> {URL["https://github.com/WolframResearch/PacletCICD"], None},
+              ButtonNote -> "https://github.com/WolframResearch/PacletCICD"
              ]
             ],
             "Item",
