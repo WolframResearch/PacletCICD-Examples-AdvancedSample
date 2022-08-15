@@ -3,7 +3,7 @@ PacletObject[ <|
     "Description"      -> "A complete sample Paclet that includes library resources",
     "Creator"          -> "Sample Author",
     "BuildDate"        -> "$BuildDate$",
-    "Version"          -> "1.3.0",
+    "Version"          -> "1.6.0",
     "WolframVersion"   -> "13.0+",
     "License"          -> "MIT",
     "PublisherID"      -> "SamplePublisher",
