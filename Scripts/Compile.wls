@@ -1,7 +1,7 @@
 #!/usr/bin/env wolframscript
 
 If[ FailureQ @ FindFile[ "Wolfram`PacletCICD`" ],
-    PacletInstall[ "https://github.com/WolframResearch/PacletCICD/releases/download/v0.8.0/Wolfram__PacletCICD-0.8.0.paclet" ]
+    PacletInstall @ ResourceObject[ "Wolfram/PacletCICD" ]
 ];
 
 Needs[ "Wolfram`PacletCICD`" ];
