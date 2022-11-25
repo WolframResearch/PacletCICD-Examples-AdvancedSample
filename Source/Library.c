@@ -1,6 +1,7 @@
 #include "WolframLibrary.h"
 #include "AddOne.c"
 #include "AddTwo.c"
+#include "AddThree.c"
 
 DLLEXPORT mint WolframLibrary_getVersion() {
     return WolframLibraryVersion;
@@ -36,6 +37,16 @@ DLLEXPORT int AddTwo(WolframLibraryData libData,
     mint I1;
     I0 = MArgument_getInteger(Args[0]);
     I1 = addTwo(I0);
+    MArgument_setInteger(Res, I1);
+    return LIBRARY_NO_ERROR;
+}
+
+DLLEXPORT int AddThree(WolframLibraryData libData,
+                     mint Argc, MArgument *Args, MArgument Res) {
+    mint I0;
+    mint I1;
+    I0 = MArgument_getInteger(Args[0]);
+    I1 = addThree(I0);
     MArgument_setInteger(Res, I1);
     return LIBRARY_NO_ERROR;
 }
