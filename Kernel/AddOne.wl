@@ -1,4 +1,5 @@
 BeginPackage[ "SamplePublisher`AdvancedSamplePaclet`AddOne`" ];
+Needs[ "SamplePublisher`AdvancedSamplePaclet`" ];
 Needs[ "SamplePublisher`AdvancedSamplePaclet`Common`" ];
 Begin[ "`Private`" ];
 
