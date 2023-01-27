@@ -1,23 +1,16 @@
 BeginPackage[ "SamplePublisher`AdvancedSamplePaclet`" ];
 
-AddOne;
-AddTwo;
+(* Exported Symbols *)
+AddOne::usage = "AddOne[x] adds one to x.";
+AddTwo::usage = "AddTwo[x] adds two to x.";
 
-Begin[ "`Private`" ];
+(* Definitions shared between subpackages: *)
+<<SamplePublisher`AdvancedSamplePaclet`Common`;
 
-AddOne[ x_Integer ] := addOne @ x;
-AddTwo[ x_Integer ] := addTwo @ x;
+(* Definition for AddOne: *)
+<<SamplePublisher`AdvancedSamplePaclet`AddOne`;
 
-addOne := addOne = LibraryFunctionLoad[ $lib, "AddOne", { Integer }, Integer ];
-addTwo := addTwo = LibraryFunctionLoad[ $lib, "AddTwo", { Integer }, Integer ];
-
-$lib = FileNameJoin @ {
-    DirectoryName[ $InputFileName, 2 ],
-    "LibraryResources",
-    $SystemID,
-    "SampleLibrary." <> Internal`DynamicLibraryExtension[ ]
-};
-
-End[ ];
+(* Definition for AddTwo: *)
+<<SamplePublisher`AdvancedSamplePaclet`AddTwo`;
 
 EndPackage[ ];
