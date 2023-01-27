@@ -3,14 +3,14 @@ BeginPackage[ "SamplePublisher`AdvancedSamplePaclet`" ];
 (* Exported Symbols *)
 AddOne::usage = "AddOne[x] adds one to x.";
 AddTwo::usage = "AddTwo[x] adds two to x.";
+AddThree::usage = "AddThree[x] adds three to x.";
 
 (* Definitions shared between subpackages: *)
 <<SamplePublisher`AdvancedSamplePaclet`Common`;
 
-(* Definition for AddOne: *)
+(* Each exported function has its own subpackage: *)
 <<SamplePublisher`AdvancedSamplePaclet`AddOne`;
-
-(* Definition for AddTwo: *)
 <<SamplePublisher`AdvancedSamplePaclet`AddTwo`;
+<<SamplePublisher`AdvancedSamplePaclet`AddThree`;
 
 EndPackage[ ];

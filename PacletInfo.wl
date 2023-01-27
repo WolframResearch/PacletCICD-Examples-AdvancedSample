@@ -15,7 +15,8 @@ PacletObject[ <|
             "Context" -> { "SamplePublisher`AdvancedSamplePaclet`" },
             "Symbols" -> {
                 "SamplePublisher`AdvancedSamplePaclet`AddOne",
-                "SamplePublisher`AdvancedSamplePaclet`AddTwo"
+                "SamplePublisher`AdvancedSamplePaclet`AddTwo",
+                "SamplePublisher`AdvancedSamplePaclet`AddThree"
             }
         },
         {
