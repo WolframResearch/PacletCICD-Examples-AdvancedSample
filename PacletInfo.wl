@@ -3,7 +3,7 @@ PacletObject[ <|
     "Description"      -> "A complete sample Paclet that includes library resources",
     "Creator"          -> "Sample Author",
     "BuildDate"        -> "$BuildDate$",
-    "Version"          -> "1.7.0",
+    "Version"          -> "1.8.0",
     "WolframVersion"   -> "13.0+",
     "License"          -> "MIT",
     "PublisherID"      -> "SamplePublisher",
@@ -15,7 +15,8 @@ PacletObject[ <|
             "Context" -> { "SamplePublisher`AdvancedSamplePaclet`" },
             "Symbols" -> {
                 "SamplePublisher`AdvancedSamplePaclet`AddOne",
-                "SamplePublisher`AdvancedSamplePaclet`AddTwo"
+                "SamplePublisher`AdvancedSamplePaclet`AddTwo",
+                "SamplePublisher`AdvancedSamplePaclet`AddThree"
             }
         },
         {

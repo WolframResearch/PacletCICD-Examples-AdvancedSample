@@ -23,3 +23,11 @@ VerificationTest[
     SameTest -> MatchQ,
     TestID -> "AddOne-Integer-Overflow"
 ]
+
+VerificationTest[
+    AddOne[ x ],
+    Failure[ "AddOne::NotInteger", _ ],
+    { AddOne::NotInteger },
+    SameTest -> MatchQ,
+    TestID -> "AddOne-NotInteger"
+]
